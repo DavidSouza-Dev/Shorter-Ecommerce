@@ -5,8 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint  --max-warnings=0",
-    "flint": "eslint src  --max-warnings=0"
+    "nlint": "next lint  --max-warnings=0",
+    "lint": "eslint src  --max-warnings=0"
   },
   "lint-staged": {
     "src/**/*": [
