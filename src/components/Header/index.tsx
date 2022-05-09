@@ -93,7 +93,6 @@ const Header = () => {
           </li>
           <li className="nav-item ">
             <a
-              href="#"
               className="nav-link"
               onClick={() => setActive(!active)}
               data-message="botão para abrir a tela de mini cart"

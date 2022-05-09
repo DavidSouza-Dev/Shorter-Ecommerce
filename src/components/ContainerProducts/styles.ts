@@ -106,7 +106,8 @@ export const Title = styled.h2`
   -webkit-box-orient: vertical;
   font-style: italic;
   line-height: 1.2;
-  margin: 1.2rem 0 0.9rem;
+  margin: 1.2rem auto 0.9rem;
+  text-align: center;
   overflow: hidden;
   text-transform: uppercase;
 `
