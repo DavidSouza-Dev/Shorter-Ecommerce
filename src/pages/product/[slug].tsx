@@ -16,7 +16,9 @@ export default function PageOfProduct({
 }: Product) {
   const router = useRouter()
 
-  // retorna um loading, qualquer coisa que configurar, enquanto  o PageTemplate está sendo criado
+  /**
+   Is useful if your app has a very large number of static pages that depend on data (such as a very large e-commerce site). If you want to pre-render all  product pages, the builds would take a very long time. 
+   */
   if (router.isFallback)
     return (
       <>
@@ -41,6 +43,10 @@ export default function PageOfProduct({
   )
 }
 
+/* 
+  When exporting a function called getStaticPaths from a page that uses Dynamic Routes, Next.js will statically pre-render all the paths specified by getStaticPaths.
+*/
+
 export async function getStaticPaths() {
   const res = await fetch("https://fakestoreapi.com/products?limit=5")
   const products = await res.json()
@@ -54,6 +60,9 @@ export async function getStaticPaths() {
   return { paths, fallback: true }
 }
 
+/* 
+  Exporting a function called getStaticProps will pre-render a page at build time using the props returned from the function:
+*/
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const res = await fetch(`https://fakestoreapi.com/products/${params?.slug}`)
   const product = await res.json()
