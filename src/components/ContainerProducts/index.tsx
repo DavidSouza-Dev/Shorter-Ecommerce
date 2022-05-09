@@ -25,7 +25,7 @@ const ContainerProducts = ({ products }: containerProductsProps) => {
                       data-testid="ProductsImage"
                     />
                   </S.WrapperImage>
-                  <S.Price>Price: $ {price}</S.Price>
+                  <S.Price>Price: $ {price.toFixed(2)}</S.Price>
                   <S.Title>{title}</S.Title>
                 </S.ProductItem>
               </a>

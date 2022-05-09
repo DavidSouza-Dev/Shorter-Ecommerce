@@ -43,4 +43,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Deployed Page
 
-- [Shorter Ecommerce](https://shorter-ecommerce.vercel.app/) - A simple Ecommerce to show listed products that I went and show more details in another Page. There I can insert products to cart.. 
+- [Shorter Ecommerce](https://shorter-ecommerce.vercel.app/) - A simple Ecommerce to show listed products and show more details in another Page. There I can insert products to cart. 
