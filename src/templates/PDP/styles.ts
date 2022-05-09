@@ -89,6 +89,9 @@ export const ProductBuyInfo = styled.div`
   img {
     margin-top: 2rem;
   }
+  @media (max-width: 415px) {
+    width: 100%;
+  }
 `
 export const CodeRef = styled.span`
   margin-left: auto;
@@ -124,6 +127,9 @@ export const BuyBox = styled.div`
   text-align: center;
   border: 1px solid #eee;
   padding: 25px 50px;
+  @media (max-width: 415px) {
+    padding: 25px 20px;
+  }
 `
 export const Seller = styled.div`
   margin-bottom: 10px;
