@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type nodeChildren = {
   children: React.ReactNode
 }
@@ -31,4 +32,15 @@ export type TminiCart = TminicartItems[]
 
 export type containerProductsProps = {
   products: Product[]
+}
+
+export type TcheckoutContext = {
+  miniCart: TminiCart
+  setMiniCart: (state: any) => void
+  total: number
+  setTotal: any
+  finalQuantity: number
+  setFinalQuantity: any
+  active: boolean
+  setActive: (state: boolean) => void
 }

@@ -126,7 +126,7 @@ const Header = () => {
               miniCart?.map(
                 (
                   { id, image, title, price, quantity }: TminicartItems,
-                  index: string
+                  index: number
                 ) => (
                   <div key={index}>
                     <S.TopBar>

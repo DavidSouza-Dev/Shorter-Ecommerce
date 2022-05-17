@@ -1,11 +1,12 @@
 import Link from "next/link"
 import BuyButton from "components/BuyButton"
 import Header from "components/Header"
-import React from "react"
+import React, { useContext } from "react"
 import * as S from "./styles"
 import Image from "next/image"
 import { Product } from "types"
 import { NextSeo } from "next-seo"
+import { Context } from "provider/context"
 
 const PageTemplate = ({
   id,
@@ -15,6 +16,7 @@ const PageTemplate = ({
   description,
   image,
 }: Product) => {
+  const { setActive } = useContext(Context)
   return (
     <>
       <NextSeo
@@ -42,7 +44,9 @@ const PageTemplate = ({
           <S.Breadcrumb>
             <li>
               <Link href="/">
-                <a aria-label="Go to Home">Home</a>
+                <a aria-label="Go to Home" onClick={() => setActive(false)}>
+                  Home
+                </a>
               </Link>
             </li>
             <li>
